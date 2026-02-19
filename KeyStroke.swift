@@ -33,12 +33,19 @@ enum KeyParse {
         let alts = splitAlternatives(s)
         var out: [KeyStroke] = []
         for alt in alts {
-            if alt.lowercased().contains("arrow keys") {
+            let lowered = alt.lowercased()
+            if lowered.contains("arrow keys") {
                 // treat as special; user must press any arrow key
                 out.append(KeyStroke(key: "Arrow", cmd: false, option: false, shift: false, control: false))
                 continue
             }
-            var tokens = alt
+
+            // Skip non-keyboard/manual-instruction rows that cannot be answered by a single key press.
+            if lowered.contains("click") || lowered.contains("drag") || lowered.contains("scroll") || lowered.contains("toggle between") {
+                continue
+            }
+
+            let tokens = alt
                 .replacingOccurrences(of: "+", with: " ")
                 .replacingOccurrences(of: "Function", with: "Fn")
                 .replacingOccurrences(of: "fn", with: "Fn")
@@ -47,7 +54,7 @@ enum KeyParse {
                 .filter { !$0.isEmpty }
 
             var cmd = false, option = false, shift = false, control = false
-            var key = ""
+            var keys: [String] = []
 
             for t in tokens {
                 switch t {
@@ -56,10 +63,13 @@ enum KeyParse {
                 case "Shift": shift = true
                 case "Ctrl": control = true
                 default:
-                    key = t
+                    keys.append(t)
                 }
             }
-            if key.isEmpty, let last = tokens.last { key = last }
+
+            // A valid shortcut alternative must contain exactly one non-modifier key token.
+            guard keys.count == 1 else { continue }
+            let key = keys[0]
 
             // Normalize common names
             let normalizedKey: String

@@ -1,1633 +1,907 @@
 {
   "meta": {
     "source": "Ableton Live 12 Manual, Chapter 41",
-    "source_pages": "~946-966 (PDF pages)",
-    "generated_at": "2026-02-19T22:10:41.813801Z",
     "os": "macOS",
     "live_version": "12",
-    "count": 180,
-    "note": "Auto-extracted; review recommended for a few wrapped rows."
+    "generated_at": "2026-02-19T22:05:40.372668Z",
+    "count": 128
   },
   "shortcuts": [
     {
-      "id": "41_1_toggle_full_screen_mode",
+      "id": "41.1.full_screen",
       "action": "Toggle Full Screen Mode",
-      "mac_keys": "Ctrl Cmd F",
-      "windows_keys": "F11",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Ctrl + Cmd + F",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_toggle_second_window",
+      "id": "41.1.second_window",
       "action": "Toggle Second Window",
-      "mac_keys": "Shift W Cmd Shift W",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + W",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_toggle_session_arrangement_viewtab",
-      "action": "Toggle Session/Arrangement ViewTab",
-      "mac_keys": "Toggle Between Device/Clip ViewShift Tab or F12 Shift Tab or F12",
-      "windows_keys": "Tab",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.1.session_arrangement",
+      "action": "Toggle Session/Arrangement View",
+      "mac_keys": "Tab",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_toggle_device_and_clip_view",
-      "action": "Toggle Device and Clip View",
-      "mac_keys": "click view toggle Option click view toggle Toggle Hot-Swap Mode Q Q Toggle Drum Rack/Last Selected PadD D Hide/Show Info View Shift ? Shift ? Hide/Show Video Window Ctrl Alt V Cmd Option V",
-      "windows_keys": "Alt",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.1.device_clip",
+      "action": "Toggle Between Device/Clip View",
+      "mac_keys": "Shift + Tab or F12",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_hide_show_browser",
+      "id": "41.1.hot_swap",
+      "action": "Toggle Hot-Swap Mode",
+      "mac_keys": "Q",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
+    },
+    {
+      "id": "41.1.drum_rack_last_pad",
+      "action": "Toggle Drum Rack/Last Selected Pad",
+      "mac_keys": "D",
+      "category": "Showing and Hiding Views",
+      "context": "Drum Rack"
+    },
+    {
+      "id": "41.1.info_view",
+      "action": "Hide/Show Info View",
+      "mac_keys": "Shift + ?",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
+    },
+    {
+      "id": "41.1.video_window",
+      "action": "Hide/Show Video Window",
+      "mac_keys": "Cmd + Option + V",
+      "category": "Showing and Hiding Views",
+      "context": "Video"
+    },
+    {
+      "id": "41.1.browser",
       "action": "Hide/Show Browser",
-      "mac_keys": "Alt B or Ctrl",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + B or Cmd + Option + 5",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_alt_5cmd",
-      "action": "Alt 5Cmd",
-      "mac_keys": "B or Cmd",
-      "windows_keys": "Option",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_hide_show_overview",
+      "id": "41.1.overview",
       "action": "Hide/Show Overview",
-      "mac_keys": "Alt O Cmd Option O",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + O",
+      "category": "Showing and Hiding Views",
+      "context": "Arrangement"
     },
     {
-      "id": "41_1_hide_show_in_out",
+      "id": "41.1.in_out",
       "action": "Hide/Show In/Out",
-      "mac_keys": "Alt I Cmd Option I",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + I",
+      "category": "Showing and Hiding Views",
+      "context": "Mixer"
     },
     {
-      "id": "41_1_hide_show_sends",
+      "id": "41.1.sends",
       "action": "Hide/Show Sends",
-      "mac_keys": "Alt S Cmd Option S",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + S",
+      "category": "Showing and Hiding Views",
+      "context": "Mixer"
     },
     {
-      "id": "41_1_hide_show_mixer",
+      "id": "41.1.mixer",
       "action": "Hide/Show Mixer",
-      "mac_keys": "Alt M Cmd Option M",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + M",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_hide_show_clip_view",
+      "id": "41.1.clip_view",
       "action": "Hide/Show Clip View",
-      "mac_keys": "Alt 3 Cmd Option 3",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + 3",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_hide_show_device_view",
+      "id": "41.1.device_view",
       "action": "Hide/Show Device View",
-      "mac_keys": "Alt 4 Cmd Option 4",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + 4",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_hide_show_the_groove_pool",
+      "id": "41.1.groove_pool",
       "action": "Hide/Show the Groove Pool",
-      "mac_keys": "Alt 6 Cmd Option 6",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + 6",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_1_open_the_settings",
+      "id": "41.1.settings",
       "action": "Open the Settings",
-      "mac_keys": ", Cmd , Close Window/Dialog Esc Esc",
-      "windows_keys": "Ctrl",
-      "section": "41.1 Showing and Hiding Views",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + ,",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
     },
     {
-      "id": "41_2_move_focus_to_the_control_bar",
+      "id": "41.1.close_dialog",
+      "action": "Close Window/Dialog",
+      "mac_keys": "Esc",
+      "category": "Showing and Hiding Views",
+      "context": "Global"
+    },
+    {
+      "id": "41.2.focus_control_bar",
       "action": "Move Focus to the Control Bar",
-      "mac_keys": "0 Option 0",
-      "windows_keys": "Alt",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Option + 0",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_session_viewalt",
-      "action": "Move Focus to the Session ViewAlt",
-      "mac_keys": "Option 1",
-      "windows_keys": "1",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.focus_session",
+      "action": "Move Focus to the Session View",
+      "mac_keys": "Option + 1",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_arrangement_viewalt",
-      "action": "Move Focus to the Arrangement ViewAlt",
-      "mac_keys": "Option 2",
-      "windows_keys": "2",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.focus_arrangement",
+      "action": "Move Focus to the Arrangement View",
+      "mac_keys": "Option + 2",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_clip_view",
+      "id": "41.2.focus_clip",
       "action": "Move Focus to the Clip View",
-      "mac_keys": "3 Option 3",
-      "windows_keys": "Alt",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Option + 3",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_device_viewalt",
-      "action": "Move Focus to the Device ViewAlt",
-      "mac_keys": "Option 4",
-      "windows_keys": "4",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.focus_device",
+      "action": "Move Focus to the Device View",
+      "mac_keys": "Option + 4",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_browser",
+      "id": "41.2.focus_browser",
       "action": "Move Focus to the Browser",
-      "mac_keys": "5 Option 5",
-      "windows_keys": "Alt",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Option + 5",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_groove_poolalt",
-      "action": "Move Focus to the Groove PoolAlt",
-      "mac_keys": "Option 6",
-      "windows_keys": "6",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.focus_groove_pool",
+      "action": "Move Focus to the Groove Pool",
+      "mac_keys": "Option + 6",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_help_view",
+      "id": "41.2.focus_help",
       "action": "Move Focus to the Help View",
-      "mac_keys": "7 Option 7",
-      "windows_keys": "Alt",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Option + 7",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_selected_clip_panelalt",
-      "action": "Move Focus to the Selected Clip PanelAlt",
-      "mac_keys": "Option 8",
-      "windows_keys": "8",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.focus_selected_clip_panel",
+      "action": "Move Focus to the Selected Clip Panel",
+      "mac_keys": "Option + 8",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_focus_to_the_clip_panels",
+      "id": "41.2.focus_clip_panels",
       "action": "Move Focus to the Clip Panels",
-      "mac_keys": "Shift P Option Shift P",
-      "windows_keys": "Alt",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Option + Shift + P",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Keyboard navigation"
     },
     {
-      "id": "41_2_move_to_next_focusable_controltab",
-      "action": "Move to Next Focusable ControlTab",
-      "mac_keys": "Move to Previous Focusable ControlShift Tab Shift Tab",
-      "windows_keys": "Tab",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.next_control",
+      "action": "Move to Next Focusable Control",
+      "mac_keys": "Tab",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Requires Use Tab to Move Focus enabled"
     },
     {
-      "id": "41_2_move_to_next_neighbor_of_current_controlctrl",
-      "action": "Move to Next Neighbor of Current ControlCtrl",
-      "mac_keys": "Option Tab",
-      "windows_keys": "Tab",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.prev_control",
+      "action": "Move to Previous Focusable Control",
+      "mac_keys": "Shift + Tab",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Requires Use Tab to Move Focus enabled"
     },
     {
-      "id": "41_2_move_to_previous_neighbor_of_current_controlctrl",
-      "action": "Move to Previous Neighbor of Current ControlCtrl",
-      "mac_keys": "Tab Option Shift Tab",
-      "windows_keys": "Shift",
-      "section": "41.2 Keyboard Focus and Navigation",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.2.next_neighbor",
+      "action": "Move to Next Neighbor of Current Control",
+      "mac_keys": "Option + Tab",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Requires Use Tab to Move Focus enabled"
     },
     {
-      "id": "41_3_new_live_set",
+      "id": "41.2.prev_neighbor",
+      "action": "Move to Previous Neighbor of Current Control",
+      "mac_keys": "Option + Shift + Tab",
+      "category": "Keyboard Focus and Navigation",
+      "context": "Requires Use Tab to Move Focus enabled"
+    },
+    {
+      "id": "41.3.new_set",
       "action": "New Live Set",
-      "mac_keys": "N Cmd N",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + N",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_open_live_set",
+      "id": "41.3.open_set",
       "action": "Open Live Set",
-      "mac_keys": "O Cmd O",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + O",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_save_live_set",
+      "id": "41.3.save_set",
       "action": "Save Live Set",
-      "mac_keys": "S Cmd S",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + S",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_save_live_set_as",
+      "id": "41.3.save_set_as",
       "action": "Save Live Set As…",
-      "mac_keys": "Shift S Cmd Shift S",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + S",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_quit_live",
+      "id": "41.3.quit",
       "action": "Quit Live",
-      "mac_keys": "Q Cmd Q",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Q",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_hide_live",
+      "id": "41.3.hide_live",
       "action": "Hide Live",
-      "mac_keys": "H",
-      "windows_keys": "Cmd",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + H",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_export_audio_video",
+      "id": "41.3.export_audio_video",
       "action": "Export Audio/Video",
-      "mac_keys": "Shift R Cmd Shift R",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + R",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_3_export_midi_file",
+      "id": "41.3.export_midi",
       "action": "Export MIDI File",
-      "mac_keys": "Shift E Cmd Shift E",
-      "windows_keys": "Ctrl",
-      "section": "41.3 Working with Sets and the Program",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + E",
+      "category": "Working with Sets and the Program",
+      "context": "Global"
     },
     {
-      "id": "41_4_group_devices",
-      "action": "Group Devices",
-      "mac_keys": "G Cmd G",
-      "windows_keys": "Ctrl",
-      "section": "41.4 Working with Devices and Plug-Ins",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.13.draw_mode",
+      "action": "Toggle Draw Mode (Pitch Lock Off)",
+      "mac_keys": "B",
+      "category": "Grid Snapping and Drawing",
+      "context": "MIDI Note Editor / global tool"
     },
     {
-      "id": "41_4_ungroup_devices",
-      "action": "Ungroup Devices",
-      "mac_keys": "Shift G Cmd Shift G",
-      "windows_keys": "Ctrl",
-      "section": "41.4 Working with Devices and Plug-Ins",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.13.grid_narrow",
+      "action": "Narrow Grid",
+      "mac_keys": "Cmd + 1",
+      "category": "Grid Snapping and Drawing",
+      "context": "Editors"
     },
     {
-      "id": "41_4_activate_deactivate_all_devices_in_grouphold",
-      "action": "Activate/Deactivate All Devices in GroupHold",
-      "mac_keys": "and click on device activatorHold Option and click on device activator Add Device(s) to Selection Shift click Shift click",
-      "windows_keys": "Alt",
-      "section": "41.4 Working with Devices and Plug-Ins",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_4_see_list_of_devices_on_a_track_right_click_on_device_view_se",
-      "action": "See List of Devices on a Track right-click on Device View selectorright-click on Device View selector Reset Parameter Value",
-      "mac_keys": "or double-click Delete or double-click Load Selected Device from BrowserEnter Enter Hot-Swap Selected Device Q Q Show/Hide Plug-In Window Ctrl Alt P Cmd Option P",
-      "windows_keys": "Delete",
-      "section": "41.4 Working with Devices and Plug-Ins",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_cut",
-      "action": "Cut",
-      "mac_keys": "X Cmd X",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_copy",
-      "action": "Copy",
-      "mac_keys": "C Cmd C",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_paste",
-      "action": "Paste",
-      "mac_keys": "V Cmd V",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_duplicate",
-      "action": "Duplicate",
-      "mac_keys": "D Cmd D",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_delete",
-      "action": "Delete",
-      "mac_keys": "Delete Undo Ctrl Z Cmd Z",
-      "windows_keys": "Delete",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_redo",
-      "action": "Redo",
-      "mac_keys": "Y Cmd Shift Z",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_rename",
-      "action": "Rename",
-      "mac_keys": "R Cmd R",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_select_all",
-      "action": "Select All",
-      "mac_keys": "A Cmd A",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_select_multiple_items",
-      "action": "Select Multiple Items",
-      "mac_keys": "click Cmd click",
-      "windows_keys": "Ctrl",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_select_multiple_items_by_first_and_last_itemshift_click",
-      "action": "Select Multiple Items by First and Last ItemShift click",
-      "mac_keys": "click",
-      "windows_keys": "Shift",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_move_to_next_track_scene_when_renamingtab",
-      "action": "Move to Next Track/Scene When RenamingTab",
-      "mac_keys": "Ignore Grid Quantization When DraggingAlt Cmd",
-      "windows_keys": "Tab",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_5_time_across_all_tracks",
-      "action": "Time Across All Tracks",
-      "mac_keys": "Shift",
-      "windows_keys": "Shift",
-      "section": "41.5 Editing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_6_return_to_default_delete_delete_type_in_value_0_9_0_9_go_to_",
-      "action": "Return to Default Delete Delete Type In Value 0…9 0…9 Go to Next Field (Bar/Beat/ 16th)., ., Cancel Value Entry",
-      "mac_keys": "Esc Confirm Value Entry Enter Enter",
-      "windows_keys": "Esc",
-      "section": "41.6 Adjusting Values",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_7_toggle_automation_mode",
-      "action": "Toggle Automation Mode",
-      "mac_keys": "A Finer Resolution When DraggingShift Shift",
-      "windows_keys": "A",
-      "section": "41.7 Commands for Breakpoint Envelopes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_7_momentarily_toggle_fade_controlsf",
-      "action": "Momentarily Toggle Fade ControlsF",
-      "mac_keys": "Delete Selected Breakpoint EnvelopeCtrl Delete Cmd Delete",
-      "windows_keys": "F",
-      "section": "41.7 Commands for Breakpoint Envelopes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_set_start_marker",
-      "action": "Set Start Marker",
-      "mac_keys": "F9 Cmd F9",
-      "windows_keys": "Ctrl",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_set_loop_brace_start",
-      "action": "Set Loop Brace Start",
-      "mac_keys": "F10 Cmd F10",
-      "windows_keys": "Ctrl",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_set_loop_brace",
-      "action": "Set Loop Brace",
-      "mac_keys": "Ctrl F11 Cmd F11",
-      "windows_keys": "End",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_set",
-      "action": "Set",
-      "mac_keys": "Marker Ctrl F12 Cmd F12",
-      "windows_keys": "End",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_move_start_marker_to_position",
-      "action": "Move Start Marker to Position",
-      "mac_keys": "click Cmd click",
-      "windows_keys": "Ctrl",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_move",
-      "action": "Move",
-      "mac_keys": "Marker to Position Ctrl Shift click Cmd Shift click",
-      "windows_keys": "End",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_nudge_loop_brace_left_right_right_and_left_arrow_keys_right_",
-      "action": "Nudge Loop Brace Left/Right right and left arrow keys right and left arrow keys Move Loop by Loop Length up and down arrow keys up and down arrow keys Halve/Double Loop Length",
-      "mac_keys": "up and down arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_keys_shorten_lengthen_loop",
-      "action": "keys Shorten/Lengthen Loop",
-      "mac_keys": "right and left arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_8_select_material_in_loop",
-      "action": "Select Material in Loop",
-      "mac_keys": "Shift L Cmd Shift L",
-      "windows_keys": "Ctrl",
-      "section": "41.8 Loop Brace and Start/End Markers",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_zoom_in_window",
-      "action": "Zoom In Window",
-      "mac_keys": "+ Cmd +",
-      "windows_keys": "Ctrl",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_zoom_out_window",
-      "action": "Zoom Out Window",
-      "mac_keys": "- Cmd -",
-      "windows_keys": "Ctrl",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_zoom_out_time_ruler_scroll_display_to_follow_playbackctrl",
-      "action": "Zoom Out Time Ruler - - Scroll Display to Follow PlaybackCtrl",
-      "mac_keys": "F Option Shift F",
-      "windows_keys": "Shift",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_scroll_left_right",
-      "action": "Scroll Left/Right",
-      "mac_keys": "scroll Shift scroll",
-      "windows_keys": "Shift",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_pan_left_right_of_selection",
-      "action": "Pan Left/Right of Selection",
-      "mac_keys": "Alt Cmd Option",
-      "windows_keys": "Ctrl",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_add_items_to_a_selection",
-      "action": "Add Items to a Selection",
-      "mac_keys": "click or drag Shift click or drag Add Adjacent Clips/Tracks/ Scenes to Multi-SelectionShift click Shift click",
-      "windows_keys": "Shift",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_9_add_nonadjacent_clips_tracks_scenes_to_a_multi_selectionctrl",
-      "action": "Add Nonadjacent Clips/ Tracks/Scenes to a Multi- SelectionCtrl click",
-      "mac_keys": "click",
-      "windows_keys": "Cmd",
-      "section": "41.9 Zooming, Display and Selections",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_10_switch_between_sample_envelopes_tabsctrl",
-      "action": "Switch Between Sample/ Envelopes TabsCtrl",
-      "mac_keys": "Option Tab",
-      "windows_keys": "Tab",
-      "section": "41.10 Clip View Editor View Modes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_10_switch_between_notes_envelopes_mpe_tabsctrl",
-      "action": "Switch Between Notes/ Envelopes/MPE TabsCtrl",
-      "mac_keys": "Option Tab",
-      "windows_keys": "Tab",
-      "section": "41.10 Clip View Editor View Modes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_10_switch_to_sample_notes",
-      "action": "Switch to Sample/Notes",
-      "mac_keys": "Alt Shift 1 Option Shift 1",
-      "windows_keys": "Tab",
-      "section": "41.10 Clip View Editor View Modes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_10_switch_to_envelopes",
-      "action": "Switch to Envelopes",
-      "mac_keys": "Alt Shift 2 Option Shift 2",
-      "windows_keys": "Tab",
-      "section": "41.10 Clip View Editor View Modes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_10_switch_to_mpe",
-      "action": "Switch to MPE",
-      "mac_keys": "Alt Shift 3 Option Shift 3",
-      "windows_keys": "Tab",
-      "section": "41.10 Clip View Editor View Modes",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_quantize",
-      "action": "Quantize",
-      "mac_keys": "U Cmd U",
-      "windows_keys": "Ctrl",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_quantize_settings",
-      "action": "Quantize Settings…",
-      "mac_keys": "Shift U Cmd Shift U",
-      "windows_keys": "Ctrl",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_move_selected_warp_marker_right_and_left_arrow_keys_right_an",
-      "action": "Move Selected Warp Marker right and left arrow keys right and left arrow keys Select Warp Marker",
-      "mac_keys": "right and left arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_scroll_display_to_follow_playbackctrl",
-      "action": "Scroll Display to Follow PlaybackCtrl",
-      "mac_keys": "F Option Shift F",
-      "windows_keys": "Shift",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_keys_zoom_to_clip_selection_z_z_zoom_back_from_clip_selectio",
-      "action": "keys Zoom to Clip Selection Z Z Zoom Back from Clip SelectionX",
-      "mac_keys": "Insert Warp Marker Ctrl I Cmd I",
-      "windows_keys": "X",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_delete_warp_marker",
-      "action": "Delete Warp Marker",
-      "mac_keys": "Delete Insert Transient Ctrl Shift I Cmd Shift I",
-      "windows_keys": "Delete",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_delete_transient",
-      "action": "Delete Transient",
-      "mac_keys": "Shift Delete Cmd Shift Delete",
-      "windows_keys": "Ctrl",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_fit_content_to_view_width_w_w_fit_content_to_view_height",
-      "action": "Fit Content to View Width W W Fit Content to View Height",
-      "mac_keys": "H",
-      "windows_keys": "H",
-      "section": "41.1 1 Clip View Sample Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_select_all_notes",
-      "action": "Select All Notes",
-      "mac_keys": "A Cmd A",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_copy_notes",
-      "action": "Copy Notes",
-      "mac_keys": "drag Option drag",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_chop_selected_notes_on_grid_or_split_notes_at_time_selection",
-      "action": "Chop Selected Notes on Grid or Split Notes at Time Selection Start/EndCtrl",
-      "mac_keys": "Cmd E",
-      "windows_keys": "E",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_chop_notes_in_increments_of",
-      "action": "Chop Notes in Increments of",
-      "mac_keys": "Ctrl E drag up/down Cmd E drag up/down Chop Notes in Increments of 2 Ctrl Shift E drag up/ downCmd Shift E drag up/ down Split Notes at Exact Location Hold E then click to split, drag to moveHold E then click to split, drag to move Join Notes Ctrl J Cmd J",
-      "windows_keys": "1",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_fit_notes_to_time_range",
-      "action": "Fit Notes to Time Range",
-      "mac_keys": "Alt J Cmd Option J",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_fit_content_to_view_width_w_w_fit_content_to_view_height",
-      "action": "Fit Content to View Width W W Fit Content to View Height",
-      "mac_keys": "H Quantize Ctrl U Cmd U",
-      "windows_keys": "H",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_quantize_settings",
-      "action": "Quantize Settings…",
-      "mac_keys": "Shift U Cmd Shift U",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_scroll_editor_vertically",
-      "action": "Scroll Editor Vertically",
-      "mac_keys": "Up/Down keys Page Up/Down keys Scroll Editor Vertically in Fine IncrementsShift Page Up/Down keys Shift Page Up/Down keys",
-      "windows_keys": "Page",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_scroll_editor_horizontally",
-      "action": "Scroll Editor Horizontally",
-      "mac_keys": "Page Up/Down keys Cmd Page Up/Down keys",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_change_velocity_from_midi_note_editoralt_drag",
-      "action": "Change Velocity from MIDI Note EditorAlt drag",
-      "mac_keys": "drag",
-      "windows_keys": "Cmd",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_move_insert_marker_to_beginninghome",
-      "action": "Move Insert Marker to BeginningHome",
-      "mac_keys": "or Fn left arrow key Move Insert Marker to End End End or Fn right arrow Select Next/Previous Note Alt up and down arrow keysOption up and down arrow",
-      "windows_keys": "Home",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_select_next_previous_note_in_same_key_trackalt_left_and_righ",
-      "action": "Select Next/Previous Note in Same Key TrackAlt left and right arrow keys",
-      "mac_keys": "left and right arrow",
-      "windows_keys": "Option",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_keys_scroll_display_to_follow_playbackctrl",
-      "action": "keys Scroll Display to Follow PlaybackCtrl",
-      "mac_keys": "F Option Shift F",
-      "windows_keys": "Shift",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_keys_zoom_to_clip_selection_z_z_zoom_back_from_clip_selectio",
-      "action": "keys Zoom to Clip Selection Z Z Zoom Back from Clip SelectionX X Zoom In/Out Horizontally +- +- Set Note Selection Velocity Type a value between 0-1 27 and press EnterType a value between 0-1 27 and press",
-      "mac_keys": "Adjust Note Selection Velocity Ctrl up and down arrow",
-      "windows_keys": "Enter",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_keys_adjust_note_selection_velocity_deviationctrl",
-      "action": "keys Adjust Note Selection Velocity DeviationCtrl",
-      "mac_keys": "up and down arrow keysCmd Shift up and down arrow keys Adjust Note Selection Chance Ctrl Alt up and down arrow keysCmd Option up and down arrow keys Toggle Full-Size Clip View Ctrl Alt E Cmd Option E",
-      "windows_keys": "Shift",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_group_notes_play_all",
-      "action": "Group Notes (Play All)",
-      "mac_keys": "G Cmd G",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_ungroup_notes",
-      "action": "Ungroup Notes",
-      "mac_keys": "Shift G Cmd Shift G",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_apply_current_midi_tool_settingsctrl",
-      "action": "Apply Current MIDI Tool SettingsCtrl",
-      "mac_keys": "Cmd Enter",
-      "windows_keys": "Enter",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_invert_note_selection",
-      "action": "Invert Note Selection",
-      "mac_keys": "Shift A Cmd Shift A",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_highlight_scale_k_k_split_arrangement_clip_based_on_time_sel",
-      "action": "Highlight Scale K K Split Arrangement Clip Based on Time SelectionCtrl",
-      "mac_keys": "E Cmd Shift E",
-      "windows_keys": "Shift",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_show_hide_midi_note_filters",
-      "action": "Show/Hide MIDI Note Filters",
-      "mac_keys": "Shift F Cmd Shift F",
-      "windows_keys": "Ctrl",
-      "section": "41.1 2 Clip View MIDI Note Editor",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_13_toggle_draw_mode_pitch_lock_off_b",
-      "action": "Toggle Draw Mode (Pitch Lock Off)B",
-      "mac_keys": "Narrow Grid Ctrl 1 Cmd 1",
-      "windows_keys": "B",
-      "section": "41.13 Grid Snapping and Drawing",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_13_widen_grid",
+      "id": "41.13.grid_widen",
       "action": "Widen Grid",
-      "mac_keys": "2 Cmd 2",
-      "windows_keys": "Ctrl",
-      "section": "41.13 Grid Snapping and Drawing",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 2",
+      "category": "Grid Snapping and Drawing",
+      "context": "Editors"
     },
     {
-      "id": "41_13_triplet_grid",
+      "id": "41.13.grid_triplet",
       "action": "Triplet Grid",
-      "mac_keys": "3 Cmd 3",
-      "windows_keys": "Ctrl",
-      "section": "41.13 Grid Snapping and Drawing",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 3",
+      "category": "Grid Snapping and Drawing",
+      "context": "Editors"
     },
     {
-      "id": "41_13_snap_to_grid",
+      "id": "41.13.snap_to_grid",
       "action": "Snap to Grid",
-      "mac_keys": "4 Cmd 4",
-      "windows_keys": "Ctrl",
-      "section": "41.13 Grid Snapping and Drawing",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 4",
+      "category": "Grid Snapping and Drawing",
+      "context": "Editors"
     },
     {
-      "id": "41_13_fixed_zoom_adaptive_grid",
+      "id": "41.13.grid_fixed_zoom_adaptive",
       "action": "Fixed/Zoom-Adaptive Grid",
-      "mac_keys": "5 Cmd 5",
-      "windows_keys": "Ctrl",
-      "section": "41.13 Grid Snapping and Drawing",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 5",
+      "category": "Grid Snapping and Drawing",
+      "context": "Editors"
     },
     {
-      "id": "41_1_sixteenth_note_quantization",
+      "id": "41.14.quant_16",
       "action": "Sixteenth-Note Quantization",
-      "mac_keys": "6 Cmd 6",
-      "windows_keys": "Ctrl",
-      "section": "41.1 4 Global Quantization",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 6",
+      "category": "Global Quantization",
+      "context": "Global"
     },
     {
-      "id": "41_1_eighth_note_quantization",
+      "id": "41.14.quant_8",
       "action": "Eighth-Note Quantization",
-      "mac_keys": "7 Cmd 7",
-      "windows_keys": "Ctrl",
-      "section": "41.1 4 Global Quantization",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 7",
+      "category": "Global Quantization",
+      "context": "Global"
     },
     {
-      "id": "41_1_quarter_note_quantization",
+      "id": "41.14.quant_4",
       "action": "Quarter-Note Quantization",
-      "mac_keys": "8 Cmd 8",
-      "windows_keys": "Ctrl",
-      "section": "41.1 4 Global Quantization",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 8",
+      "category": "Global Quantization",
+      "context": "Global"
     },
     {
-      "id": "41_1_1_bar_quantization",
+      "id": "41.14.quant_1bar",
       "action": "1-Bar Quantization",
-      "mac_keys": "9 Cmd 9",
-      "windows_keys": "Ctrl",
-      "section": "41.1 4 Global Quantization",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 9",
+      "category": "Global Quantization",
+      "context": "Global"
     },
     {
-      "id": "41_1_quantization_off",
+      "id": "41.14.quant_off",
       "action": "Quantization Off",
-      "mac_keys": "0 Cmd 0",
-      "windows_keys": "Ctrl",
-      "section": "41.1 4 Global Quantization",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + 0",
+      "category": "Global Quantization",
+      "context": "Global"
     },
     {
-      "id": "41_15_launch_selected_clip_slot",
+      "id": "41.15.launch_clip",
       "action": "Launch Selected Clip/Slot",
-      "mac_keys": "Enter Select Neighboring Clip/Slot arrow keys arrow keys Select All Clips/Slots Ctrl A Cmd A",
-      "windows_keys": "Enter",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Enter",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_copy_clips",
+      "id": "41.15.select_neighbor",
+      "action": "Select Neighboring Clip/Slot",
+      "mac_keys": "Arrow keys",
+      "category": "Session View",
+      "context": "Session"
+    },
+    {
+      "id": "41.15.select_all",
+      "action": "Select All Clips/Slots",
+      "mac_keys": "Cmd + A",
+      "category": "Session View",
+      "context": "Session"
+    },
+    {
+      "id": "41.15.copy_clips",
       "action": "Copy Clips",
-      "mac_keys": "drag Option drag",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Option drag",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_add_remove_stop_button",
+      "id": "41.15.stop_button",
       "action": "Add/Remove Stop Button",
-      "mac_keys": "E Cmd E",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + E",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_stop_clips_in_track_with_slot_selectionctrl",
-      "action": "Stop Clips in Track with Slot SelectionCtrl",
-      "mac_keys": "Cmd Enter",
-      "windows_keys": "Enter",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.15.stop_clips_in_track",
+      "action": "Stop Clips in Track with Slot Selection",
+      "mac_keys": "Cmd + Enter",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_insert_midi_clip",
+      "id": "41.15.insert_midi_clip",
       "action": "Insert MIDI clip",
-      "mac_keys": "Shift M Cmd Shift M",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + M",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_insert_scene",
+      "id": "41.15.insert_scene",
       "action": "Insert Scene",
-      "mac_keys": "I Cmd I",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + I",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_insert_captured_scene",
+      "id": "41.15.insert_captured_scene",
       "action": "Insert Captured Scene",
-      "mac_keys": "Shift I Cmd Shift I",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + I",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_15_move",
-      "action": "Move",
-      "mac_keys": "Between Scenes (One at a Time)up and down arrow keys up and down arrow keys Move Up/Down Between Scenes (Eight at a Time)Page Up/Down keys Page Up/Down keys Capture MIDI Ctrl Shift C Cmd Shift C",
-      "windows_keys": "Up/Down",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_15_record_to_session_view",
-      "action": "Record to Session View",
-      "mac_keys": "Shift F9 Cmd Shift F9",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_15_toggle_follow_actions_for_selected_clipsshift",
-      "action": "Toggle Follow Actions for Selected ClipsShift",
-      "mac_keys": "Shift Enter",
-      "windows_keys": "Enter",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_15_create_follow_action_chain",
-      "action": "Create Follow Action Chain",
-      "mac_keys": "Shift Enter Cmd Shift Enter",
-      "windows_keys": "Ctrl",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_15_deactivate_selected_clip",
-      "action": "Deactivate Selected Clip",
-      "mac_keys": "0 Jump to Highlighted Track Title BarEsc Esc Jump to the First Track of the Current SceneHome Home or Fn left arrow key Jump to the Last Track of the Current SceneEnd End or Fn right arrow key Jump to the Current Scene from the Last TrackEnd End or Fn right arrow key",
-      "windows_keys": "0",
-      "section": "41.15 Session View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_split_clip_at_selection",
-      "action": "Split Clip at Selection",
-      "mac_keys": "E Cmd E",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_consolidate_selection_into_clipctrl",
-      "action": "Consolidate Selection into ClipCtrl",
-      "mac_keys": "Cmd J",
-      "windows_keys": "J",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_crop_selected_clips",
-      "action": "Crop Selected Clips",
-      "mac_keys": "Shift J Cmd Shift J",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_resize_clip_when_insert_marker_is_at_clip_edgeenter_left_and",
-      "action": "Resize Clip When Insert Marker is at Clip EdgeEnter left and right arrow keysEnter left and right arrow keys Slide Waveform",
-      "mac_keys": "Alt drag Shift Option drag",
-      "windows_keys": "Shift",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_stretch_warped_clip",
-      "action": "Stretch Warped Clip",
-      "mac_keys": "drag in clip title bar Shift drag in clip title bar Select Time Within Clip Shift Alt drag in clip title barShift Option drag in clip title bar Create Fade/Crossfade Ctrl Alt F Cmd Option F",
-      "windows_keys": "Shift",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_delete_fades_crossfades_in_selected_clip_s_ctrl",
-      "action": "Delete Fades/Crossfades in Selected Clip(s)Ctrl",
-      "mac_keys": "Backspace Cmd Option Delete",
-      "windows_keys": "Alt",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_toggle_loop_brace",
-      "action": "Toggle Loop Brace",
-      "mac_keys": "L Cmd L",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_adjust_loop_brace_length",
-      "action": "Adjust Loop Brace Length",
-      "mac_keys": "left and right arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_select_loop_brace_contents",
-      "action": "Select Loop Brace Contents",
-      "mac_keys": "Shift L Cmd Shift L",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_capture_midi",
+      "id": "41.15.capture_midi",
       "action": "Capture MIDI",
-      "mac_keys": "Shift C Cmd Shift C",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + C",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_16_insert_silence",
-      "action": "Insert Silence",
-      "mac_keys": "I Cmd I",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_cut_time",
-      "action": "Cut Time",
-      "mac_keys": "Shift X Cmd Shift X",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_paste_time",
-      "action": "Paste Time",
-      "mac_keys": "Shift V Cmd Shift V",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_duplicate_time",
-      "action": "Duplicate Time",
-      "mac_keys": "Shift D Cmd Shift D",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_delete_time",
-      "action": "Delete Time",
-      "mac_keys": "Shift Delete Cmd Shift Delete",
-      "windows_keys": "Ctrl",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_fold_unfold_selected_tracks",
-      "action": "Fold/Unfold Selected Tracks",
-      "mac_keys": "or left and right arrow keysU or left and right arrow keys Unfold All Tracks Alt U Option U",
-      "windows_keys": "U",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_adjust_height_of_selected_tracks_clipsalt_and",
-      "action": "Adjust Height of Selected Tracks/ClipsAlt + and",
-      "mac_keys": "- Option + and Option",
-      "windows_keys": "Alt",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_scroll_display_to_follow_playbackctrl",
-      "action": "- Scroll Display to Follow PlaybackCtrl",
-      "mac_keys": "F Option Shift F",
-      "windows_keys": "Shift",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_scroll_display_left_right_of_selectionctrl",
-      "action": "Scroll Display Left/Right of SelectionCtrl",
-      "mac_keys": "drag Cmd Option drag",
-      "windows_keys": "Alt",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_zoom_back_from_arrangement_time_selectionx_x_play_from_inser",
-      "action": "Zoom Back from Arrangement Time SelectionX X Play from Insert Marker in Selected ClipCtrl",
-      "mac_keys": "Option Space",
-      "windows_keys": "Space",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_move_insert_marker_to_playhead_positionctrl",
-      "action": "Move Insert Marker to Playhead PositionCtrl",
-      "mac_keys": "Space Cmd Shift Space",
-      "windows_keys": "Shift",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_16_jump_to_highlighted_track_title_baresc",
-      "action": "Jump to Highlighted Track Title BarEsc",
-      "mac_keys": "Move Focus to Mixer Alt Shift M Option Shift M",
-      "windows_keys": "Esc",
-      "section": "41.16 Arrangement View",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_show_take_lanes",
-      "action": "Show Take Lanes",
-      "mac_keys": "Alt U Cmd Option U",
-      "windows_keys": "Ctrl",
-      "section": "41.1 7 Comping",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_add_selected_take_lane_area_to_main_track_laneenter",
-      "action": "Add Selected Take Lane Area to Main Track LaneEnter",
-      "mac_keys": "Audition Selected Take Lane T T Add Take Lane Shift Alt T Shift Option T",
-      "windows_keys": "Enter",
-      "section": "41.1 7 Comping",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_duplicate_selected_take_lane",
-      "action": "Duplicate Selected Take Lane",
-      "mac_keys": "D Cmd D",
-      "windows_keys": "Ctrl",
-      "section": "41.1 7 Comping",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_18_bounce_to_new_track",
-      "action": "Bounce to New Track",
-      "mac_keys": "B Cmd B",
-      "windows_keys": "Ctrl",
-      "section": "41.18 Bounce to Audio",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_18_paste_bounced_audio",
-      "action": "Paste Bounced Audio",
-      "mac_keys": "Alt V Cmd Option V",
-      "windows_keys": "Ctrl",
-      "section": "41.18 Bounce to Audio",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_insert_audio_track",
-      "action": "Insert Audio Track",
-      "mac_keys": "T Cmd T",
-      "windows_keys": "Ctrl",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_insert_midi_track",
-      "action": "Insert MIDI Track",
-      "mac_keys": "Shift T Cmd Shift T",
-      "windows_keys": "Ctrl",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_insert_return_track",
-      "action": "Insert Return Track",
-      "mac_keys": "Alt T Cmd Option T",
-      "windows_keys": "Ctrl",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_rename_selected_track",
-      "action": "Rename Selected Track",
-      "mac_keys": "R Cmd R",
-      "windows_keys": "Ctrl",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_go_to_next_track_when_renamingtab",
-      "action": "Go to Next Track When RenamingTab",
-      "mac_keys": "Group Selected Tracks Ctrl G Cmd G",
-      "windows_keys": "Tab",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_ungroup_tracks",
-      "action": "Ungroup Tracks",
-      "mac_keys": "Shift G Cmd Shift G",
-      "windows_keys": "Ctrl",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_show_grouped_tracks_hide_grouped_tracks_collapse_expand_grou",
-      "action": "Show Grouped Tracks + + Hide Grouped Tracks - - Collapse/Expand Grouped TracksU",
-      "mac_keys": "Move Nonadjacent Tracks Without CollapsingCtrl arrow keys Cmd arrow keys",
-      "windows_keys": "U",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_1_arm_selected_tracks",
-      "action": "Arm Selected Tracks",
-      "mac_keys": "C Solo Selected Tracks S S Add Device from Browser Enter Enter Deactivate Selected Track 0 0 Freeze/Unfreeze Tracks Ctrl Alt Shift F Cmd Option Shift F",
-      "windows_keys": "C",
-      "section": "41.1 9 Commands for Tracks",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_20_play_from_start_marker_stop",
-      "action": "Play from Start Marker/Stop",
-      "mac_keys": "Space Continue Play from Stop Point Shift Space Shift Space",
-      "windows_keys": "Space",
-      "section": "41.20 Transport",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_20_stop_playback_at",
-      "action": "Stop Playback at",
-      "mac_keys": "of SelectionCtrl Space Option Space",
-      "windows_keys": "End",
-      "section": "41.20 Transport",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_20_play_arrangement_view_selectionspace",
-      "action": "Play Arrangement View SelectionSpace",
-      "mac_keys": "Move Insert Marker to BeginningHome Home or Fn left arrow key Record F9 F9 Arm Recording in Arrangement ViewShift F9 Shift F9",
-      "windows_keys": "Space",
-      "section": "41.20 Transport",
-      "version": "12",
-      "os": "macOS"
-    },
-    {
-      "id": "41_20_record_to_session_view",
+      "id": "41.15.record_to_session",
       "action": "Record to Session View",
-      "mac_keys": "Shift F9 Cmd Shift F9",
-      "windows_keys": "Ctrl",
-      "section": "41.20 Transport",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Shift + F9",
+      "category": "Session View",
+      "context": "Session"
     },
     {
-      "id": "41_20_back_to_arrangement",
+      "id": "41.15.toggle_follow_actions",
+      "action": "Toggle Follow Actions for Selected Clips",
+      "mac_keys": "Shift + Enter",
+      "category": "Session View",
+      "context": "Session"
+    },
+    {
+      "id": "41.15.create_follow_chain",
+      "action": "Create Follow Action Chain",
+      "mac_keys": "Cmd + Shift + Enter",
+      "category": "Session View",
+      "context": "Session"
+    },
+    {
+      "id": "41.16.split_clip",
+      "action": "Split Clip at Selection",
+      "mac_keys": "Cmd + E",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.consolidate",
+      "action": "Consolidate Selection into Clip",
+      "mac_keys": "Cmd + J",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.crop_clips",
+      "action": "Crop Selected Clips",
+      "mac_keys": "Cmd + Shift + J",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.fade_crossfade",
+      "action": "Create Fade/Crossfade",
+      "mac_keys": "Cmd + Option + F",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.delete_fades",
+      "action": "Delete Fades/Crossfades in Selected Clip(s)",
+      "mac_keys": "Cmd + Option + Delete",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.loop_brace",
+      "action": "Toggle Loop Brace",
+      "mac_keys": "Cmd + L",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.loop_brace_select_contents",
+      "action": "Select Loop Brace Contents",
+      "mac_keys": "Cmd + Shift + L",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.insert_silence",
+      "action": "Insert Silence",
+      "mac_keys": "Cmd + I",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.cut_time",
+      "action": "Cut Time",
+      "mac_keys": "Cmd + Shift + X",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.paste_time",
+      "action": "Paste Time",
+      "mac_keys": "Cmd + Shift + V",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.duplicate_time",
+      "action": "Duplicate Time",
+      "mac_keys": "Cmd + Shift + D",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.optimize_height",
+      "action": "Optimize Arrangement Height",
+      "mac_keys": "H",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.optimize_width",
+      "action": "Optimize Arrangement Width",
+      "mac_keys": "W",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.deactivate_selection",
+      "action": "Deactivate Selection",
+      "mac_keys": "0",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.reverse_audio",
+      "action": "Reverse Audio Clip Selection",
+      "mac_keys": "R",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.zoom_to_selection",
+      "action": "Zoom to Arrangement Time Selection",
+      "mac_keys": "Z",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.zoom_back",
+      "action": "Zoom Back from Arrangement Time Selection",
+      "mac_keys": "X",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.move_insert_to_playhead",
+      "action": "Move Insert Marker to Playhead Position",
+      "mac_keys": "Cmd + Shift + Space",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.16.move_focus_to_mixer",
+      "action": "Move Focus to Mixer",
+      "mac_keys": "Option + Shift + M",
+      "category": "Arrangement View",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.17.show_take_lanes",
+      "action": "Show Take Lanes",
+      "mac_keys": "Cmd + Option + U",
+      "category": "Comping",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.17.audition_take_lane",
+      "action": "Audition Selected Take Lane",
+      "mac_keys": "T",
+      "category": "Comping",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.17.add_take_lane",
+      "action": "Add Take Lane",
+      "mac_keys": "Shift + Option + T",
+      "category": "Comping",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.17.duplicate_take_lane",
+      "action": "Duplicate Selected Take Lane",
+      "mac_keys": "Cmd + D",
+      "category": "Comping",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.18.bounce_new_track",
+      "action": "Bounce to New Track",
+      "mac_keys": "Cmd + B",
+      "category": "Bounce to Audio",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.18.paste_bounced_audio",
+      "action": "Paste Bounced Audio",
+      "mac_keys": "Cmd + Option + V",
+      "category": "Bounce to Audio",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.19.insert_audio_track",
+      "action": "Insert Audio Track",
+      "mac_keys": "Cmd + T",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.insert_midi_track",
+      "action": "Insert MIDI Track",
+      "mac_keys": "Cmd + Shift + T",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.insert_return_track",
+      "action": "Insert Return Track",
+      "mac_keys": "Cmd + Option + T",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.rename_track",
+      "action": "Rename Selected Track",
+      "mac_keys": "Cmd + R",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.group_tracks",
+      "action": "Group Selected Tracks",
+      "mac_keys": "Cmd + G",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.ungroup_tracks",
+      "action": "Ungroup Tracks",
+      "mac_keys": "Cmd + Shift + G",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.arm_tracks",
+      "action": "Arm Selected Tracks",
+      "mac_keys": "C",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.solo_tracks",
+      "action": "Solo Selected Tracks",
+      "mac_keys": "S",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.add_device_from_browser",
+      "action": "Add Device from Browser",
+      "mac_keys": "Enter",
+      "category": "Commands for Tracks",
+      "context": "Browser"
+    },
+    {
+      "id": "41.19.deactivate_track",
+      "action": "Deactivate Selected Track",
+      "mac_keys": "0",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.freeze_tracks",
+      "action": "Freeze/Unfreeze Tracks",
+      "mac_keys": "Cmd + Option + Shift + F",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.19.delete_track",
+      "action": "Delete Track from Track Title Bar",
+      "mac_keys": "Delete",
+      "category": "Commands for Tracks",
+      "context": "Global"
+    },
+    {
+      "id": "41.20.play_stop",
+      "action": "Play from Start Marker/Stop",
+      "mac_keys": "Space",
+      "category": "Transport",
+      "context": "Global"
+    },
+    {
+      "id": "41.20.continue_play",
+      "action": "Continue Play from Stop Point",
+      "mac_keys": "Shift + Space",
+      "category": "Transport",
+      "context": "Global"
+    },
+    {
+      "id": "41.20.stop_end_selection",
+      "action": "Stop Playback at End of Selection",
+      "mac_keys": "Option + Space",
+      "category": "Transport",
+      "context": "Global"
+    },
+    {
+      "id": "41.20.move_insert_begin",
+      "action": "Move Insert Marker to Beginning",
+      "mac_keys": "Home (or Fn + Left Arrow)",
+      "category": "Transport",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.20.record",
+      "action": "Record",
+      "mac_keys": "F9",
+      "category": "Transport",
+      "context": "Global"
+    },
+    {
+      "id": "41.20.arm_record_arrangement",
+      "action": "Arm Recording in Arrangement View",
+      "mac_keys": "Shift + F9",
+      "category": "Transport",
+      "context": "Arrangement"
+    },
+    {
+      "id": "41.20.record_session",
+      "action": "Record to Session View",
+      "mac_keys": "Cmd + Shift + F9",
+      "category": "Transport",
+      "context": "Session"
+    },
+    {
+      "id": "41.20.back_to_arrangement",
       "action": "Back to Arrangement",
-      "mac_keys": "F10 Activate/Deactivate Track 1… 8F1…F8 F1…F8 Toggle Metronome O O",
-      "windows_keys": "F10",
-      "section": "41.20 Transport",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "F10",
+      "category": "Transport",
+      "context": "Global"
     },
     {
-      "id": "41_2_turn_audio_engine_on_off",
+      "id": "41.20.toggle_metronome",
+      "action": "Toggle Metronome",
+      "mac_keys": "O",
+      "category": "Transport",
+      "context": "Global"
+    },
+    {
+      "id": "41.21.audio_engine",
       "action": "Turn Audio Engine On/Off",
-      "mac_keys": "Alt Shift E Cmd Option Shift E",
-      "windows_keys": "Ctrl",
-      "section": "41.2 1 Audio Engine",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Option + Shift + E",
+      "category": "Audio Engine",
+      "context": "Global"
     },
     {
-      "id": "41_22_scroll_down_up_up_and_down_arrow_keys_up_and_down_arrow_keys",
-      "action": "Scroll Down/Up up and down arrow keys up and down arrow keys Hide/Show Browser",
-      "mac_keys": "Alt B Cmd Option B",
-      "windows_keys": "Ctrl",
-      "section": "41.22 Browser",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.22.browser_scroll",
+      "action": "Scroll Down/Up",
+      "mac_keys": "Up/Down Arrow",
+      "category": "Browser",
+      "context": "Browser"
     },
     {
-      "id": "41_22_close_open_folders_right_and_left_arrow_keys_right_and_left_",
-      "action": "Close/Open Folders right and left arrow keys right and left arrow keys Load Selected Item from BrowserEnter",
-      "mac_keys": "Preview Selected File Shift Enter or right arrow keyShift Enter or right arrow key Search in Browser Ctrl F Cmd F",
-      "windows_keys": "Enter",
-      "section": "41.22 Browser",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.22.browser_hide_show",
+      "action": "Hide/Show Browser",
+      "mac_keys": "Cmd + Option + B",
+      "category": "Browser",
+      "context": "Browser"
     },
     {
-      "id": "41_22_jump_to_search_results_down_arrow_key_or",
-      "action": "Jump to Search Results down arrow key or",
-      "mac_keys": "down arrow key or Enter Assign Color(s) to Selected Browser Item(s)1…7 1…7 Reset Assigned Color(s) for Selected Browser Item(s)0 0 Show Similar Files Using Similarity SearchCtrl Shift F Cmd Shift F",
-      "windows_keys": "Enter",
-      "section": "41.22 Browser",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.22.browser_load_item",
+      "action": "Load Selected Item from Browser",
+      "mac_keys": "Enter",
+      "category": "Browser",
+      "context": "Browser"
     },
     {
-      "id": "41_22_browser_history_back",
+      "id": "41.22.browser_preview",
+      "action": "Preview Selected File",
+      "mac_keys": "Shift + Enter (or Right Arrow)",
+      "category": "Browser",
+      "context": "Browser"
+    },
+    {
+      "id": "41.22.browser_search",
+      "action": "Search in Browser",
+      "mac_keys": "Cmd + F",
+      "category": "Browser",
+      "context": "Browser"
+    },
+    {
+      "id": "41.22.browser_history_back",
       "action": "Browser History Back",
-      "mac_keys": "[ Cmd [ Browser History Forward Ctrl ] Cmd ]",
-      "windows_keys": "Ctrl",
-      "section": "41.22 Browser",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + [",
+      "category": "Browser",
+      "context": "Browser"
     },
     {
-      "id": "41_22_hide_show_filter_view",
-      "action": "Hide/Show Filter View",
-      "mac_keys": "Alt G Cmd Option G",
-      "windows_keys": "Ctrl",
-      "section": "41.22 Browser",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.22.browser_history_forward",
+      "action": "Browser History Forward",
+      "mac_keys": "Cmd + ]",
+      "category": "Browser",
+      "context": "Browser"
     },
     {
-      "id": "41_22_hide_show_tag_editor",
-      "action": "Hide/Show Tag Editor",
-      "mac_keys": "Shift E Cmd Shift E",
-      "windows_keys": "Ctrl",
-      "section": "41.22 Browser",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.22.show_similar_files",
+      "action": "Show Similar Files Using Similarity Search",
+      "mac_keys": "Cmd + Shift + F",
+      "category": "Browser",
+      "context": "Browser"
     },
     {
-      "id": "41_23_swap_to_next_similar_sample",
+      "id": "41.23.swap_next_similar",
       "action": "Swap to Next Similar Sample",
-      "mac_keys": "right arrow Cmd right arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.23 Similar Sample Swapping",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Right Arrow",
+      "category": "Similar Sample Swapping",
+      "context": "Drum Rack / Simpler"
     },
     {
-      "id": "41_23_swap_to_previous_similar_samplectrl_left_arrow",
-      "action": "Swap to Previous Similar SampleCtrl left arrow",
-      "mac_keys": "left arrow",
-      "windows_keys": "Cmd",
-      "section": "41.23 Similar Sample Swapping",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.23.swap_prev_similar",
+      "action": "Swap to Previous Similar Sample",
+      "mac_keys": "Cmd + Left Arrow",
+      "category": "Similar Sample Swapping",
+      "context": "Drum Rack / Simpler"
     },
     {
-      "id": "41_23_save_as_similarity_reference",
+      "id": "41.23.save_similarity_reference",
       "action": "Save as Similarity Reference",
-      "mac_keys": "up arrow Cmd up arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.23 Similar Sample Swapping",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Up Arrow",
+      "category": "Similar Sample Swapping",
+      "context": "Drum Rack / Simpler"
     },
     {
-      "id": "41_23_return_to_reference",
+      "id": "41.23.return_to_reference",
       "action": "Return to Reference",
-      "mac_keys": "down arrow Cmd down arrow",
-      "windows_keys": "Ctrl",
-      "section": "41.23 Similar Sample Swapping",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + Down Arrow",
+      "category": "Similar Sample Swapping",
+      "context": "Drum Rack / Simpler"
     },
     {
-      "id": "41_24_toggle_midi_map_mode",
+      "id": "41.24.midi_map",
       "action": "Toggle MIDI Map Mode",
-      "mac_keys": "M Cmd M",
-      "windows_keys": "Ctrl",
-      "section": "41.24 Key/MIDI Map Mode and the Computer",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + M",
+      "category": "Key/MIDI Map Mode and Computer MIDI Keyboard",
+      "context": "Global"
     },
     {
-      "id": "41_24_toggle_key_map_mode",
+      "id": "41.24.key_map",
       "action": "Toggle Key Map Mode",
-      "mac_keys": "K Cmd K",
-      "windows_keys": "Ctrl",
-      "section": "41.24 Key/MIDI Map Mode and the Computer",
-      "version": "12",
-      "os": "macOS"
+      "mac_keys": "Cmd + K",
+      "category": "Key/MIDI Map Mode and Computer MIDI Keyboard",
+      "context": "Global"
     },
     {
-      "id": "41_24_computer_midi_keyboard_m_m_adjust_computer_midi_keyboard_oct",
-      "action": "Computer MIDI Keyboard M M Adjust Computer MIDI Keyboard Octave Range Up/ DownX and",
-      "mac_keys": "keys X and Z keys Adjust Computer MIDI Keyboard Incoming Note Velocity Up/DownC and V keys C and V keys When the Computer MIDI Keyboard is enabled, you can play notes and adjust the octave and velocity ranges using the following keys: The Computer MIDI Keyboard Layout. Single letter shortcuts can still be used when the Computer MIDI Keyboard is active by adding Shift , e.g., Shift S to solo a track.",
-      "windows_keys": "Z",
-      "section": "41.24 Key/MIDI Map Mode and the Computer",
-      "version": "12",
-      "os": "macOS"
+      "id": "41.24.computer_midi_keyboard",
+      "action": "Computer MIDI Keyboard",
+      "mac_keys": "M",
+      "category": "Key/MIDI Map Mode and Computer MIDI Keyboard",
+      "context": "Global"
+    },
+    {
+      "id": "41.24.octave_range",
+      "action": "Adjust Computer MIDI Keyboard Octave Range Up/Down",
+      "mac_keys": "X and Z keys",
+      "category": "Key/MIDI Map Mode and Computer MIDI Keyboard",
+      "context": "Computer MIDI Keyboard"
+    },
+    {
+      "id": "41.24.velocity_range",
+      "action": "Adjust Computer MIDI Keyboard Incoming Note Velocity Up/Down",
+      "mac_keys": "C and V keys",
+      "category": "Key/MIDI Map Mode and Computer MIDI Keyboard",
+      "context": "Computer MIDI Keyboard"
     }
   ]
 }

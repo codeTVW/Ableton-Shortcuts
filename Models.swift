@@ -1,6 +1,6 @@
 import Foundation
 
-struct ShortcutItem: Identifiable, Codable, Hashable {
+struct ShortcutItem: Identifiable, Decodable, Hashable {
     let id: String
     let action: String
     let mac_keys: String
@@ -8,10 +8,44 @@ struct ShortcutItem: Identifiable, Codable, Hashable {
     let section: String
     let version: String?
     let os: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case action
+        case mac_keys
+        case windows_keys
+        case section
+        case category
+        case version
+        case os
+    }
+
+    init(id: String, action: String, mac_keys: String, windows_keys: String?, section: String, version: String?, os: String?) {
+        self.id = id
+        self.action = action
+        self.mac_keys = mac_keys
+        self.windows_keys = windows_keys
+        self.section = section
+        self.version = version
+        self.os = os
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(String.self, forKey: .id)
+        action = try c.decode(String.self, forKey: .action)
+        mac_keys = try c.decode(String.self, forKey: .mac_keys)
+        windows_keys = try c.decodeIfPresent(String.self, forKey: .windows_keys)
+        section = try c.decodeIfPresent(String.self, forKey: .section)
+            ?? c.decodeIfPresent(String.self, forKey: .category)
+            ?? "Uncategorized"
+        version = try c.decodeIfPresent(String.self, forKey: .version)
+        os = try c.decodeIfPresent(String.self, forKey: .os)
+    }
 }
 
-struct ShortcutDataset: Codable {
-    struct Meta: Codable {
+struct ShortcutDataset: Decodable {
+    struct Meta: Decodable {
         let source: String?
         let source_pages: String?
         let generated_at: String?

@@ -27,17 +27,26 @@ final class AppStore: ObservableObject {
     }
 
     func loadDataset() {
-        guard let url = Bundle.main.url(forResource: "shortcuts_live12_macos", withExtension: "json", subdirectory: "Data") else {
-            shortcuts = []
-            return
+        let candidates: [URL?] = [
+            Bundle.main.url(forResource: "shortcuts_live12_macos", withExtension: "json", subdirectory: "Data"),
+            Bundle.main.url(forResource: "shortcuts_live12_macos", withExtension: "json"),
+            Bundle.main.url(forResource: "ableton_live12_shortcuts_macos_v0", withExtension: "json", subdirectory: "Data"),
+            Bundle.main.url(forResource: "ableton_live12_shortcuts_macos_v0", withExtension: "json")
+        ]
+
+        for url in candidates.compactMap({ $0 }) {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoded = try JSONDecoder().decode(ShortcutDataset.self, from: data)
+                if !decoded.shortcuts.isEmpty {
+                    shortcuts = decoded.shortcuts
+                    return
+                }
+            } catch {
+                continue
+            }
         }
-        do {
-            let data = try Data(contentsOf: url)
-            let decoded = try JSONDecoder().decode(ShortcutDataset.self, from: data)
-            shortcuts = decoded.shortcuts
-        } catch {
-            shortcuts = []
-        }
+        shortcuts = []
     }
 
     func appSupportDir() -> URL {
@@ -87,7 +96,7 @@ final class AppStore: ObservableObject {
 
     func dueItems(limit: Int) -> [ShortcutItem] {
         let now = Date()
-        let due = shortcuts.filter { s in
+        let due = trainableShortcuts().filter { s in
             guard let p = progress[s.id] else { return false }
             return p.dueAt <= now
         }
@@ -100,11 +109,15 @@ final class AppStore: ObservableObject {
 
     func newItems(limit: Int) -> [ShortcutItem] {
         // Define "new" as intervalDays == 0 and attempts == 0
-        let items = shortcuts.filter { s in
+        let items = trainableShortcuts().filter { s in
             guard let p = progress[s.id] else { return false }
             return p.attempts == 0
         }
         return Array(items.shuffled().prefix(limit))
+    }
+
+    func trainableShortcuts() -> [ShortcutItem] {
+        shortcuts.filter { !KeyParse.parseExpected($0.mac_keys).isEmpty }
     }
 
     func startDailySession() {
@@ -115,12 +128,13 @@ final class AppStore: ObservableObject {
 
         // Default: 10 new + 30 due
         let due = dueItems(limit: 30)
-        let fresh = newItems(limit: 10)
+        let dueIDs = Set(due.map(\.id))
+        let fresh = newItems(limit: 10).filter { !dueIDs.contains($0.id) }
         var q = due + fresh
 
         // If queue is empty, add some random review
         if q.isEmpty {
-            q = Array(shortcuts.shuffled().prefix(30))
+            q = Array(trainableShortcuts().shuffled().prefix(30))
         }
 
         dailyQueue = q
