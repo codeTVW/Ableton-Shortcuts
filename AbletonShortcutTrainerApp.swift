@@ -15,6 +15,11 @@ struct AbletonShortcutTrainerApp: App {
                     store.startDailySession()
                 }
                 .keyboardShortcut("d", modifiers: [.command, .shift])
+
+                Button("Skip Current Shortcut") {
+                    store.skipCurrent()
+                }
+                .keyboardShortcut(.rightArrow, modifiers: [.command])
             }
         }
     }

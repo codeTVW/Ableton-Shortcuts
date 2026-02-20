@@ -8,10 +8,15 @@ final class AppStore: ObservableObject {
     @Published var progress: [String: ProgressItem] = [:]
     @Published var dailyQueue: [ShortcutItem] = []
     @Published var currentIndex: Int = 0
+    @Published var isAdvancing: Bool = false
     @Published var lastAnswerCorrect: Bool? = nil
     @Published var lastAnswerExpected: String = ""
     @Published var lastAnswerReceived: String = ""
     @Published var sessionStartedAt: Date? = nil
+    @Published var datasetStatus: String = ""
+    @Published var sessionAttempts: Int = 0
+    @Published var sessionCorrect: Int = 0
+    @Published var sessionSkipped: Int = 0
 
     private let progressFile = "progress_live12_macos.json"
 
@@ -34,6 +39,7 @@ final class AppStore: ObservableObject {
             Bundle.main.url(forResource: "ableton_live12_shortcuts_macos_v0", withExtension: "json", subdirectory: "Data"),
             Bundle.main.url(forResource: "ableton_live12_shortcuts_macos_v0", withExtension: "json")
         ]
+        var loadErrors: [String] = []
 
         for url in candidates.compactMap({ $0 }) {
             do {
@@ -41,13 +47,21 @@ final class AppStore: ObservableObject {
                 let decoded = try JSONDecoder().decode(ShortcutDataset.self, from: data)
                 if !decoded.shortcuts.isEmpty {
                     shortcuts = decoded.shortcuts
+                    let trainable = trainableShortcuts().count
+                    datasetStatus = "Loaded \(decoded.shortcuts.count) shortcuts (\(trainable) trainable)."
                     return
                 }
             } catch {
+                loadErrors.append(url.lastPathComponent)
                 continue
             }
         }
         shortcuts = []
+        if loadErrors.isEmpty {
+            datasetStatus = "No dataset JSON found in app bundle resources."
+        } else {
+            datasetStatus = "Dataset failed to load (\(loadErrors.joined(separator: ", ")))."
+        }
     }
 
     func appSupportDir() -> URL {
@@ -123,6 +137,10 @@ final class AppStore: ObservableObject {
 
     func startDailySession() {
         sessionStartedAt = Date()
+        isAdvancing = false
+        sessionAttempts = 0
+        sessionCorrect = 0
+        sessionSkipped = 0
         lastAnswerCorrect = nil
         lastAnswerExpected = ""
         lastAnswerReceived = ""
@@ -140,9 +158,13 @@ final class AppStore: ObservableObject {
 
         dailyQueue = q
         currentIndex = 0
+        if q.isEmpty {
+            datasetStatus = "No trainable shortcuts available. Check bundled resources and key parser."
+        }
     }
 
     func submitAnswer(received: KeyStroke, ms: Double) {
+        guard !isAdvancing else { return }
         guard let item = currentItem else { return }
         let expected = KeyParse.parseExpected(item.mac_keys)
 
@@ -161,13 +183,17 @@ final class AppStore: ObservableObject {
         lastAnswerCorrect = isCorrect
         lastAnswerExpected = expected.map { $0.normalizedString() }.joined(separator: " OR ")
         lastAnswerReceived = received.normalizedString()
+        sessionAttempts += 1
+        if isCorrect { sessionCorrect += 1 }
 
         updateProgress(id: item.id, correct: isCorrect, ms: ms)
         saveProgress()
 
         // Auto-advance
+        isAdvancing = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.next()
+            self.isAdvancing = false
         }
     }
 
@@ -208,10 +234,19 @@ final class AppStore: ObservableObject {
             // session complete
             currentIndex = dailyQueue.count
         }
+        lastAnswerCorrect = nil
+        lastAnswerExpected = ""
+        lastAnswerReceived = ""
     }
 
     func restartSession() {
         startDailySession()
+    }
+
+    func skipCurrent() {
+        guard currentItem != nil else { return }
+        sessionSkipped += 1
+        next()
     }
 
     func accuracy() -> Double {
@@ -225,5 +260,10 @@ final class AppStore: ObservableObject {
     func masteredCount() -> Int {
         // Mastered = intervalDays >= 30 and correctStreak >= 3
         progress.values.filter { $0.intervalDays >= 30 && $0.correctStreak >= 3 }.count
+    }
+
+    func sessionAccuracy() -> Double {
+        if sessionAttempts == 0 { return 0 }
+        return Double(sessionCorrect) / Double(sessionAttempts)
     }
 }

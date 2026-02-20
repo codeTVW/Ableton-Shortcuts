@@ -3,19 +3,27 @@ import AppKit
 
 struct RootView: View {
     @EnvironmentObject var store: AppStore
+    @State private var selectedTab = 0
 
     var body: some View {
-        TabView {
-            HomeView()
+        TabView(selection: $selectedTab) {
+            HomeView(onStart: {
+                store.startDailySession()
+                selectedTab = 1
+            })
+                .tag(0)
                 .tabItem { Label("Home", systemImage: "house") }
 
             TrainerView()
+                .tag(1)
                 .tabItem { Label("Train", systemImage: "keyboard") }
 
             LibraryView()
+                .tag(2)
                 .tabItem { Label("Library", systemImage: "list.bullet") }
 
             StatsView()
+                .tag(3)
                 .tabItem { Label("Stats", systemImage: "chart.bar") }
         }
         .frame(minWidth: 900, minHeight: 560)
@@ -24,6 +32,7 @@ struct RootView: View {
 
 struct HomeView: View {
     @EnvironmentObject var store: AppStore
+    let onStart: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -38,7 +47,7 @@ struct HomeView: View {
             }
 
             HStack(spacing: 12) {
-                Button("Start Daily Session") { store.startDailySession() }
+                Button("Start Daily Session") { onStart() }
                     .keyboardShortcut(.defaultAction)
 
                 Button("Restart") { store.restartSession() }
@@ -46,6 +55,16 @@ struct HomeView: View {
                 Spacer()
 
                 Text("Tip: Use Cmd Shift D to start a session from the menu.")
+                    .foregroundStyle(.secondary)
+            }
+
+            if store.dailyQueue.isEmpty {
+                Text("Geen trainbare shortcuts gevonden. Controleer of de JSON-bestanden als resource in de app-target zitten.")
+                    .foregroundStyle(.red)
+            }
+
+            if !store.datasetStatus.isEmpty {
+                Text(store.datasetStatus)
                     .foregroundStyle(.secondary)
             }
 
@@ -78,6 +97,7 @@ struct TrainerView: View {
     @State private var lastKey: KeyStroke? = nil
     @State private var startedAt: Date? = nil
     @State private var monitor: Any? = nil
+    @State private var showAnswer: Bool = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -86,6 +106,17 @@ struct TrainerView: View {
                     .font(.largeTitle)
                 Spacer()
                 Button("New Session") { store.startDailySession() }
+            }
+            HStack(spacing: 16) {
+                ProgressView(value: Double(store.currentIndex), total: Double(max(store.dailyQueue.count, 1)))
+                    .frame(maxWidth: 260)
+                Text("Session acc: \(Int(store.sessionAccuracy() * 100))%")
+                    .foregroundStyle(.secondary)
+                Text("Attempts: \(store.sessionAttempts)")
+                    .foregroundStyle(.secondary)
+                Text("Skipped: \(store.sessionSkipped)")
+                    .foregroundStyle(.secondary)
+                Spacer()
             }
 
             if store.currentIndex >= store.dailyQueue.count {
@@ -115,7 +146,18 @@ struct TrainerView: View {
                                 .foregroundStyle(.secondary)
                         }
 
+                        HStack(spacing: 10) {
+                            Button(showAnswer ? "Hide Answer" : "Show Answer") { showAnswer.toggle() }
+                            Button("Skip") { store.skipCurrent() }
+                            Spacer()
+                        }
+
                         KeyCaptureBox(lastKey: lastKey)
+
+                        if showAnswer {
+                            Text("Expected: \(store.lastAnswerExpected.isEmpty ? item.mac_keys : store.lastAnswerExpected)")
+                                .foregroundStyle(.secondary)
+                        }
 
                         if let ok = store.lastAnswerCorrect {
                             FeedbackRow(ok: ok, expected: store.lastAnswerExpected, received: store.lastAnswerReceived)
@@ -133,6 +175,9 @@ struct TrainerView: View {
         .padding(20)
         .onAppear { installKeyMonitor() }
         .onDisappear { uninstallKeyMonitor() }
+        .onChange(of: store.currentIndex) { _, _ in
+            showAnswer = false
+        }
     }
 
     func installKeyMonitor() {
@@ -272,11 +317,21 @@ struct StatsView: View {
     }
 
     func weakest(_ n: Int) -> [ShortcutItem] {
-        let pairs: [(ShortcutItem, Double)] = store.shortcuts.map { s in
+        let pairs: [(ShortcutItem, Double, Int)] = store.shortcuts.map { s in
             let p = store.progress[s.id] ?? ProgressItem.new(id: s.id)
             let acc = p.attempts == 0 ? 0.0 : Double(p.correct) / Double(p.attempts)
-            return (s, acc)
+            return (s, acc, p.attempts)
         }
-        return pairs.sorted { $0.1 < $1.1 }.prefix(n).map { $0.0 }
+        let attempted = pairs.filter { $0.2 > 0 }
+        if attempted.isEmpty {
+            return pairs.prefix(n).map { $0.0 }
+        }
+        return attempted
+            .sorted { lhs, rhs in
+                if lhs.1 == rhs.1 { return lhs.2 > rhs.2 }
+                return lhs.1 < rhs.1
+            }
+            .prefix(n)
+            .map { $0.0 }
     }
 }
